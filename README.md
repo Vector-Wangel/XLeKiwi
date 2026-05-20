@@ -1,4 +1,5 @@
 # XLeKiwi
+<img width="1279" height="1242" alt="image" src="https://github.com/user-attachments/assets/08780251-8fc4-4699-a7fc-21b3a5b62599" />
 
 Control, perception and visualization stack for the **XLeKiwi** mobile manipulation platform. Runs on Jetson Nano (Ubuntu 22.04 + ROS 2 Humble + Python 3.10) or Jetson Thor (Ubuntu 24.04 + ROS 2 Jazzy + Python 3.12). x86_64 Linux works for most paths except hardware-specific bits.
 
