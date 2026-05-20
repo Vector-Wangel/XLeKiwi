@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<profiles xmlns="http://www.eprosima.com/XMLSchemas/fastRTPS_Profiles">
+  <transport_descriptors>
+    <transport_descriptor>
+      <transport_id>usb_udp</transport_id>
+      <type>UDPv4</type>
+      <interfaceWhiteList>
+        <address>169.254.10.2</address>
+      </interfaceWhiteList>
+    </transport_descriptor>
+  </transport_descriptors>
+  <participant profile_name="usb_only" is_default_profile="true">
+    <rtps>
+      <userTransports><transport_id>usb_udp</transport_id></userTransports>
+      <useBuiltinTransports>false</useBuiltinTransports>
+    </rtps>
+  </participant>
+</profiles>

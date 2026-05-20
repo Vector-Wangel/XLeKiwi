@@ -1,0 +1,19 @@
+# Dependencies for the Panthera-HT high-level library (Panthera_lib)
+#
+# Notes:
+# - The hightorque_robot whl package only ships the low-level motor control SDK.
+# - Using the Panthera_lib high-level wrapper requires the extra dependencies below.
+#
+# Installation:
+#   pip install -r requirements.txt
+
+# Required dependencies
+pyyaml>=6.0,<7.0      # YAML configuration parser (6.0+ supports Python 3.12+)
+pin>=2.6.0            # Robot dynamics library (note: the package name is 'pin', not 'pinocchio')
+scipy>=1.9.0          # Scientific computing library (used for rotation interpolation, etc.)
+
+# Notes:
+# 1. Install the hightorque_robot whl package first.
+# 2. If you do not need Panthera_lib, installing just the whl package is enough.
+# 3. We recommend installing inside a conda environment with Python 3.9 - 3.12.
+# 4. To avoid conflicts with a ROS environment, use a dedicated conda environment.

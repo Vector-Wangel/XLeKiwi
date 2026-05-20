@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xlekiwi"
+version = "0.1.0"
+description = "Control, perception and visualization stack for the XLeKiwi mobile manipulation platform"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+    { name = "XLeKiwi contributors" },
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Robotics",
+]
+
+# Runtime deps shared across the demo scripts. The `hightorque_robot` motor
+# wheel is platform-specific and is installed by install/install_python_deps.sh
+# from panthera_python/motor_whl/. ROS 2 (`rclpy`) comes from the system, not pip.
+dependencies = [
+    "numpy",
+    "scipy",
+    "pyyaml>=6.0",
+    "opencv-python",
+    "pin>=2.6.0",        # Pinocchio dynamics (note: NOT the `pinocchio` package)
+    "pyrealsense2",
+    "odrive",
+    "fastapi",
+    "uvicorn",
+    "websockets",
+    "viser",
+    "pygame",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff",
+    "pytest",
+]
+
+[project.urls]
+Repository = "https://github.com/xlekiwi/xlekiwi"
+
+[tool.setuptools]
+# This project is primarily a collection of scripts + a vendored SDK
+# (panthera_python). No top-level Python package is installed.
+py-modules = []
